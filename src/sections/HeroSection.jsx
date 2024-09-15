@@ -39,16 +39,16 @@ const HeroSection = () => {
         </div>
         {/* ------------ */}
         <div className="icons mt-10 tablet:m-0 h-12 static tablet:absolute -bottom-3 left-0 flex gap-7">
-          <div className="w-12 h-full border-2 border-primary rounded-[5px] flex justify-center items-center hover:bg-primary hover:text-secondary transition-all duration-75">
+          <div className="w-12 h-full border-2 border-primary rounded-[5px] flex justify-center items-center hover:bg-primary hover:text-secondary transition-all duration-75 cursor-pointer">
             <IoLogoFacebook size={23} />
           </div>
-          <div className="w-12 h-full border-2 border-primary rounded-[5px] flex justify-center items-center hover:bg-primary hover:text-secondary transition-all duration-75">
+          <div className="w-12 h-full border-2 border-primary rounded-[5px] flex justify-center items-center hover:bg-primary hover:text-secondary transition-all duration-75 cursor-pointer">
             <FaGithubAlt size={23} />
           </div>
-          <div className="w-12 h-full border-2 border-primary rounded-[5px] flex justify-center items-center hover:bg-primary hover:text-secondary transition-all duration-75">
+          <div className="w-12 h-full border-2 border-primary rounded-[5px] flex justify-center items-center hover:bg-primary hover:text-secondary transition-all duration-75 cursor-pointer">
             <FaLinkedin size={23} />
           </div>
-          <div className="w-12 h-full border-2 border-primary rounded-[5px] flex justify-center items-center hover:bg-primary hover:text-secondary transition-all duration-75">
+          <div className="w-12 h-full border-2 border-primary rounded-[5px] flex justify-center items-center hover:bg-primary hover:text-secondary transition-all duration-75 cursor-pointer">
             <FaSquareInstagram size={23} />
           </div>
         </div>
