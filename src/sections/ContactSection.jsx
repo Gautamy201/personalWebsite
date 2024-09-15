@@ -5,10 +5,16 @@ import { FaSquareInstagram } from "react-icons/fa6";
 import Footer from "../components/Footer";
 const ContactSection = () => {
   return (
-    <section className="tablet:px-20 min-h-screen relative pb-28 tablet:pb-0">
-      <div className="pt-28 px-5 grid grid-cols-1 tablet:grid-cols-2">
+    <section
+      className="laptop:px-10 desktop:px-20 min-h-screen relative pb-28 laptop:pb-0"
+      id="contact"
+    >
+      <h1 className=" pt-28 mb-10  text-3xl tablet:text-4xl laptop:text-5xl text-center ">
+        Contact <span className="font-bold">Me</span>
+      </h1>
+      <div className="px-5 grid grid-cols-1 laptop:grid-cols-2">
         <div>
-          <form action="" className="grid gap-5 w-[70%]">
+          <form action="" className="grid gap-5 w-[100%] laptop:w-[70%]">
             <input
               type="text"
               placeholder="Your name"
@@ -51,9 +57,9 @@ const ContactSection = () => {
             </div>
           </form>
         </div>
-        <div className="  font-[900] flex flex-col justify-center mt-10 tablet:mt-0">
+        <div className="  font-[900] flex flex-col justify-center mt-10 laptop:mt-0">
           <h2
-            className="text-3xl tablet:text-5xl"
+            className="text-3xl laptop:text-5xl"
             style={{ wordSpacing: "5px" }}
           >
             Let's{" "}
@@ -72,12 +78,16 @@ const ContactSection = () => {
             <br />
             Something special
           </h2>
-          <p className="my-5 text-four text-sm tablet:text-lg">
+          <p className="my-5 text-four text-sm laptop:text-lg">
             I seek to push the limit of creativity to create-engaging
             user-frindly and memorable Interactive experiences
           </p>
-          <h3 className="tablet:text-3xl text-sm">Gautamyadavneta@gmail.com</h3>
-          <h3 className="tablet:text-3xl text-sm mt-3">+91 6306746339</h3>
+          <h3 className="laptop:text-3xl  tablet:text-2xl text-sm">
+            Gautamyadavneta@gmail.com
+          </h3>
+          <h3 className="laptop:text-3xl  tablet:text-2xl text-sm mt-3">
+            +91 6306746339
+          </h3>
         </div>
       </div>
       <Footer />

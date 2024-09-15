@@ -11,13 +11,16 @@ import { FaBootstrap } from "react-icons/fa6"; // bootstap icon
 import { SiSocketdotio } from "react-icons/si"; /// socket io icon
 const SkillsSection = () => {
   return (
-    <section id="#skills" className=" tablet:px-20 tablet:py-3  min-h-screen">
+    <section
+      id="skills"
+      className=" laptop:px-10 desktop:px-20 py-3  min-h-screen"
+    >
       <div className="px-5 pt-28">
-        <h1 className="text-3xl tablet:text-5xl text-center ">
+        <h1 className="text-3xl tablet:text-4xl laptop:text-5xl text-center ">
           My <span className="font-bold">Skills</span>
         </h1>
 
-        <div className="grid grid-cols-2 tablet:grid-cols-5 gap-5 tablet:gap-10 mt-10 pb-10">
+        <div className="grid grid-cols-2 tablet:grid-cols-3 laptop:grid-cols-4 desktop:grid-cols-5 gap-5 tablet:gap-10 mt-10 pb-10">
           <BoxComponent
             size={"h-48 w-48"}
             icon={<AiOutlineHtml5 size={50} />}

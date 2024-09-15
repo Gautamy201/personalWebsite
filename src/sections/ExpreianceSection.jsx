@@ -2,7 +2,10 @@ import React from "react";
 
 const ExpreianceSection = () => {
   return (
-    <section className=" tablet:px-20 py-3  bg-primary text-secondary  ">
+    <section
+      className=" tablet:px-20 py-3  bg-primary text-secondary  "
+      id="experience"
+    >
       <div className="pt-28">
         <h1 className="text-3xl tablet:text-5xl text-center">
           My <span className="font-bold">Experience</span>

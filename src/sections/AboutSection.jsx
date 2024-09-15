@@ -2,18 +2,25 @@ import React from "react";
 import aboutBanner from "/assets/images/about Banner.png";
 const AboutSection = () => {
   return (
-    <section className="tablet:px-20  tablet:py-3 min-h-screen">
-      <div className=" grid grid-cols-1 tablet:grid-cols-2 pt-28 px-5">
+    <section
+      className="desktop:px-20 target:px-5 laptop:px-10  tablet:py-3 min-h-screen"
+      id="about"
+    >
+      <div className=" grid grid-cols-1 laptop:grid-cols-2 pt-28 px-5">
         <div>
-          <img src={aboutBanner} alt="" />
+          <img
+            className="laptop:w-[450px] desktop:w-[550px]"
+            src={aboutBanner}
+            alt=""
+          />
         </div>
         <div>
-          <h1 className="text-3xl tablet:text-5xl tablet:text-left text-center mt-10 tablet:mt-0">
+          <h1 className="text-3xl tablet:text-4xl desktop:text-5xl tablet:text-left text-center mt-10 laptop:mt-0">
             My <span className="font-bold">About</span>
           </h1>
 
           <div className="my-10">
-            <p className=" text-justify text-four">
+            <p className=" text-justify text-four laptop:text-sm desktop:text-lg ">
               Hello! I'm{" "}
               <span className="text-primary font-semibold">Gautam Yadav</span>,
               a passionate and dedicated frontend developer with a strong
