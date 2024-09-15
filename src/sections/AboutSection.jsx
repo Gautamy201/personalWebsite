@@ -2,13 +2,13 @@ import React from "react";
 import aboutBanner from "/assets/images/about Banner.png";
 const AboutSection = () => {
   return (
-    <section className="px-20 h-screen py-3 ">
-      <div className=" grid grid-cols-2 mt-24 px-5">
+    <section className="tablet:px-20  tablet:py-3 min-h-screen">
+      <div className=" grid grid-cols-1 tablet:grid-cols-2 pt-28 px-5">
         <div>
           <img src={aboutBanner} alt="" />
         </div>
         <div>
-          <h1 className="text-5xl text-left">
+          <h1 className="text-3xl tablet:text-5xl tablet:text-left text-center mt-10 tablet:mt-0">
             My <span className="font-bold">About</span>
           </h1>
 

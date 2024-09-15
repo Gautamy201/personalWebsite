@@ -1,15 +1,20 @@
 import Banner from "/assets/images/Banner.png";
+import smallScreenBanner from "/assets/images/smallScreen Banner.png";
 import { IoLogoFacebook } from "react-icons/io5";
 import { FaGithubAlt } from "react-icons/fa6";
 import { FaLinkedin } from "react-icons/fa6";
 import { FaSquareInstagram } from "react-icons/fa6";
+
 const HeroSection = () => {
   return (
-    <section className=" px-20 py-3 pt-20 " id="#home">
-      <div className="main px-5 py-1 flex justify-end relative">
-        <img src={Banner} alt="" />
-        <div className=" absolute top-1/2 -translate-y-1/2 py-2 bg-secondary left-0">
-          <div className="text-5xl grid gap-5">
+    <section className=" tablet:px-20 py-3 " id="#home">
+      <div className="main pt-24 px-5 py-1 block tablet:flex justify-end relative">
+        <img className="hidden tablet:block" src={Banner} alt="" />
+        <div className="flex justify-center">
+          <img className="block tablet:hidden" src={smallScreenBanner} alt="" />
+        </div>
+        <div className="  tablet:absolute tablet:top-1/2 tablet:-translate-y-1/2 py-2 bg-secondary tablet:left-0">
+          <div className="mt-10 text-2xl tablet:text-5xl grid gap-3">
             <h1 className="">
               Hello I'am <span className="font-[900]">Gautam Yadav.</span>
             </h1>
@@ -18,7 +23,7 @@ const HeroSection = () => {
               <span
                 style={{
                   textShadow:
-                    "3px 3px 2px #000,-3px 3px 2px #000,-3px -3px 0 #000,3px -3px 0 #000",
+                    "1px 1px 1px #000,-1px 1px 1px #000,-1px -1px 0 #000,1px -1px 0 #000",
                   color: "white",
                   paddingLeft: 10,
                   letterSpacing: "1px",
@@ -32,7 +37,8 @@ const HeroSection = () => {
             </h1>
           </div>
         </div>
-        <div className="icons h-12 absolute -bottom-6 left-0 flex gap-7">
+        {/* ------------ */}
+        <div className="icons mt-10 tablet:m-0 h-12 static tablet:absolute -bottom-3 left-0 flex gap-7">
           <div className="w-12 h-full border-2 border-primary rounded-[5px] flex justify-center items-center hover:bg-primary hover:text-secondary transition-all duration-75">
             <IoLogoFacebook size={23} />
           </div>
