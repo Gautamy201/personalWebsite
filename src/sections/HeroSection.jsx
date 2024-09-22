@@ -23,7 +23,10 @@ const HeroSection = () => {
     };
   }, []);
   return (
-    <section className=" laptop:px-10 desktop:px-20 py-3 " id="home">
+    <section
+      className=" laptop:px-10 desktop:px-20 py-3 laptop:h-[100vh]"
+      id="home"
+    >
       <div className="main pt-24  px-5 py-1 block tablet:flex justify-end relative">
         <img
           className="hidden tablet:block tablet:w-[450px] laptop:w-[650px] desktop:w-[800px]"

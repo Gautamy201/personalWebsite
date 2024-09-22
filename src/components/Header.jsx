@@ -9,9 +9,11 @@ import { GiSettingsKnobs } from "react-icons/gi";
 import { RiProjectorFill } from "react-icons/ri";
 import { MdContactPhone } from "react-icons/md";
 import { useRef, useState } from "react";
+import { NavLink } from "react-router-dom";
 
 const Header = () => {
   const [menuBar, setMenuBar] = useState(false);
+
   const menuRef = useRef(null);
   const handleOutsideClick = (e) => {
     if (menuRef.current && !menuRef.current.contains(e.target)) {
@@ -27,6 +29,19 @@ const Header = () => {
   const linkClick = () => {
     setMenuBar(false);
   };
+  const styleActiveLink = (isActive) => {
+    if (isActive) {
+      return {
+        boxShadow:
+          "0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1)",
+        padding: "5px 20px",
+        backgroundColor: "black",
+        borderRadius: "5px",
+        color: "white",
+      };
+    }
+  };
+
   return (
     <header
       ref={menuRef}
@@ -38,20 +53,110 @@ const Header = () => {
         </div>
         <nav className="hidden laptop:block">
           <ul className="flex gap-10 font-[600] text-primary ">
-            <li className="hover:scale-[1.2] hover:shadow-md hover:px-2 transition-all duration-75 py-2">
-              <a href="#home">Home</a>
+            <li>
+              <NavLink
+                to={"/"}
+                smooth
+                className="hover:px-[20px] hover:shadow-md transition-all duration-75 py-[5px]"
+                style={({ isActive }) => {
+                  if (isActive) {
+                    return {
+                      boxShadow:
+                        "0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1)",
+                      padding: "5px 20px",
+                      backgroundColor: "black",
+                      borderRadius: "5px",
+                      color: "white",
+                    };
+                  }
+                }}
+              >
+                Home
+              </NavLink>
             </li>
-            <li className="hover:scale-[1.2] hover:shadow-md hover:px-2 transition-all duration-75 py-2">
-              <a href="#about">About</a>
+            <li>
+              <NavLink
+                to="about"
+                smooth
+                className="hover:px-[20px] hover:shadow-md transition-all duration-75 py-[5px]"
+                style={({ isActive }) => {
+                  if (isActive) {
+                    return {
+                      boxShadow:
+                        "0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1)",
+                      padding: "5px 20px",
+                      backgroundColor: "black",
+                      borderRadius: "5px",
+                      color: "white",
+                    };
+                  }
+                }}
+              >
+                About
+              </NavLink>
             </li>
-            <li className="hover:scale-[1.2] hover:shadow-md hover:px-2 transition-all duration-75 py-2">
-              <a href="#skills">Skills</a>
+            <li>
+              <NavLink
+                to="skills"
+                smooth
+                className="hover:px-[20px] hover:shadow-md transition-all duration-75 py-[5px]"
+                style={({ isActive }) => {
+                  if (isActive) {
+                    return {
+                      boxShadow:
+                        "0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1)",
+                      padding: "5px 20px",
+                      backgroundColor: "black",
+                      borderRadius: "5px",
+                      color: "white",
+                    };
+                  }
+                }}
+              >
+                Skills
+              </NavLink>
             </li>
-            <li className="hover:scale-[1.2] hover:shadow-md hover:px-2 transition-all duration-75 py-2">
-              <a href="#project">Project</a>
+            <li>
+              <NavLink
+                to="projects"
+                smooth
+                className="hover:px-[20px] hover:shadow-md transition-all duration-75 py-[5px]"
+                style={({ isActive }) => {
+                  if (isActive) {
+                    return {
+                      boxShadow:
+                        "0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1)",
+                      padding: "5px 20px",
+                      backgroundColor: "black",
+                      borderRadius: "5px",
+                      color: "white",
+                    };
+                  }
+                }}
+              >
+                Project
+              </NavLink>
             </li>
-            <li className="hover:scale-[1.2] hover:shadow-md hover:px-2 transition-all duration-75 py-2">
-              <a href="#contact">Contact</a>
+            <li>
+              <NavLink
+                to="contact"
+                smooth
+                className="hover:px-[20px] hover:shadow-md transition-all duration-75 py-[5px]"
+                style={({ isActive }) => {
+                  if (isActive) {
+                    return {
+                      boxShadow:
+                        "0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1)",
+                      padding: "5px 20px",
+                      backgroundColor: "black",
+                      borderRadius: "5px",
+                      color: "white",
+                    };
+                  }
+                }}
+              >
+                Contact
+              </NavLink>
             </li>
           </ul>
         </nav>
@@ -76,36 +181,119 @@ const Header = () => {
           <nav>
             <ul className="grid gap-5">
               <li onClick={linkClick}>
-                <a href="#home" className="flex gap-5 text-xl font-bold">
+                <NavLink
+                  to={"/"}
+                  className="flex gap-5 text-xl font-bold px-[20px] py-[5px] shadow-md active:scale-[0.9]"
+                  style={({ isActive }) => {
+                    if (isActive) {
+                      return {
+                        boxShadow:
+                          "0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1)",
+                        padding: "5px 20px",
+                        backgroundColor: "black",
+                        borderRadius: "5px",
+                        color: "white",
+                      };
+                    }
+                  }}
+                >
                   <AiFillHome size={25} />
                   Home
-                </a>
+                </NavLink>
               </li>
               <li onClick={linkClick}>
-                <a href="#about" className="flex gap-5 text-xl font-bold">
+                <NavLink
+                  to="about"
+                  className="flex gap-5 text-xl font-bold px-[20px] py-[5px] shadow-md active:scale-[0.9]"
+                  style={({ isActive }) => {
+                    if (isActive) {
+                      return {
+                        boxShadow:
+                          "0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1)",
+                        padding: "5px 20px",
+                        backgroundColor: "black",
+                        borderRadius: "5px",
+                        color: "white",
+                      };
+                    }
+                  }}
+                >
                   <FaUserSecret size={25} />
                   About
-                </a>
+                </NavLink>
               </li>
               <li onClick={linkClick}>
-                <a href="#skills" className="flex gap-5 text-xl font-bold">
+                <NavLink
+                  to={"skills"}
+                  className="flex gap-5 text-xl font-bold px-[20px] py-[5px] shadow-md active:scale-[0.9]"
+                  style={({ isActive }) => {
+                    if (isActive) {
+                      return {
+                        boxShadow:
+                          "0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1)",
+                        padding: "5px 20px",
+                        backgroundColor: "black",
+                        borderRadius: "5px",
+                        color: "white",
+                      };
+                    }
+                  }}
+                >
                   <GiSettingsKnobs size={25} />
                   Skills
-                </a>
+                </NavLink>
               </li>
               <li onClick={linkClick}>
-                <a href="#project" className="flex gap-5 text-xl font-bold">
+                <NavLink
+                  to="project"
+                  className="flex gap-5 text-xl font-bold px-[20px] py-[5px] shadow-md active:scale-[0.9]"
+                  style={({ isActive }) => {
+                    if (isActive) {
+                      return {
+                        boxShadow:
+                          "0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1)",
+                        padding: "5px 20px",
+                        backgroundColor: "black",
+                        borderRadius: "5px",
+                        color: "white",
+                      };
+                    }
+                  }}
+                >
                   <RiProjectorFill size={25} />
                   Projects
-                </a>
+                </NavLink>
               </li>
               <li onClick={linkClick}>
-                <a href="#contact" className="flex gap-5 text-xl font-bold">
+                <NavLink
+                  to="contact"
+                  className="flex gap-5 text-xl font-bold px-[20px] py-[5px] shadow-md active:scale-[0.9]"
+                  style={({ isActive }) => {
+                    if (isActive) {
+                      return {
+                        boxShadow:
+                          "0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1)",
+                        padding: "5px 20px",
+                        backgroundColor: "black",
+                        borderRadius: "5px",
+                        color: "white",
+                      };
+                    }
+                  }}
+                >
                   <MdContactPhone size={25} />
                   Contact
-                </a>
+                </NavLink>
               </li>
             </ul>
+            <div className="resume mt-12">
+              <a
+                href="#"
+                className="flex gap-5 text-xl font-bold px-[20px] py-3 shadow-md rounded-md  border-2 border-black active:scale-[0.9]"
+              >
+                Resume <RiDownload2Line size={22} />
+              </a>
+            </div>
           </nav>
         </div>
       )}
